@@ -44,7 +44,8 @@ export default function Navbar() {
             transition={{ duration: 0.5 }}
             className={clsx(
                 "fixed top-0 w-full z-40 transition-all duration-300",
-                scrolled ? "glass shadow-lg py-4" : "bg-transparent py-6"
+                scrolled ? "glass shadow-lg py-4" : "bg-transparent py-6 md:bg-transparent",
+                !scrolled && "max-md:bg-background/90 max-md:backdrop-blur-md"
             )}
         >
             <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
@@ -118,7 +119,7 @@ export default function Navbar() {
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
-                    className="absolute top-full left-0 w-full glass flex flex-col items-center py-8 space-y-6 shadow-xl md:hidden"
+                    className="absolute top-full left-0 w-full bg-background/95 backdrop-blur-md border-t border-border flex flex-col items-center py-8 space-y-6 shadow-xl md:hidden"
                 >
                     {navLinks.map((link) => (
                         <Link
