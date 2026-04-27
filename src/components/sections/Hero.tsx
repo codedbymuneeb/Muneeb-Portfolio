@@ -41,8 +41,8 @@ export default function Hero() {
 
             <div className="container mx-auto px-6 md:px-12 flex items-center relative z-10 w-full h-full">
 
-                {/* Right 3D Canvas — hidden on mobile to save perf, visible on sm+ */}
-                <div className="hidden sm:block absolute top-1/2 -translate-y-1/2 right-[-10%] w-[120%] lg:w-[65%] lg:right-0 h-[400px] md:h-[600px] lg:h-[900px] z-0 pointer-events-none opacity-50 lg:opacity-90">
+                {/* 3D Canvas — shown on all screens, smaller on mobile */}
+                <div className="absolute top-1/2 -translate-y-1/2 right-[-30%] w-[130%] sm:right-[-10%] sm:w-[120%] lg:w-[65%] lg:right-0 h-[300px] sm:h-[400px] md:h-[600px] lg:h-[900px] z-0 pointer-events-none opacity-30 sm:opacity-50 lg:opacity-90">
                     <Suspense fallback={null}>
                         <Canvas camera={{ position: [0, 0, 10], fov: 45 }} gl={{ antialias: false, powerPreference: "high-performance" }}>
                             <ambientLight intensity={0.5} />

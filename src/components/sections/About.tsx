@@ -42,7 +42,7 @@ export default function About() {
                                 src="/profile.jpg"
                                 alt="M-Muneeb Tariq"
                                 fill
-                                className="object-cover transition-all duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0"
+                                className="object-cover transition-all duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0 group-active:grayscale-0"
                             />
                             {/* Overlay Gradient */}
                             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60"></div>
